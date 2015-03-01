@@ -1,4 +1,4 @@
-# SFErrors
+# SFErrors [![CI Status](https://travis-ci.org/Vaseltior/SFErrors.svg?branch=master)](https://travis-ci.org/Vaseltior/SFErrors.svg?branch=master)
 
 A basic but interesting way of handling errors in Swift. 
 This little framework is based on the work of David Owens II 
