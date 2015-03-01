@@ -14,6 +14,9 @@
 		F546C9AD1AA341E400761A2D /* SFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546C9AA1AA341E400761A2D /* SFError.swift */; };
 		F546C9AE1AA341E400761A2D /* SFFailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546C9AB1AA341E400761A2D /* SFFailable.swift */; };
 		F546C9AF1AA341E400761A2D /* SFFailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F546C9AB1AA341E400761A2D /* SFFailable.swift */; };
+		F55DE55D1AA3D6DC0037657D /* SFErrors_iOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F55DE55C1AA3D6DC0037657D /* SFErrors_iOS.h */; };
+		F55DE55F1AA3D6DC0037657D /* SFErrors_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = F55DE55E1AA3D6DC0037657D /* SFErrors_iOS.m */; };
+		F55DE5651AA3D6DC0037657D /* libSFErrors-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F55DE55A1AA3D6DC0037657D /* libSFErrors-iOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,7 +27,27 @@
 			remoteGlobalIDString = F546C98C1AA33EAB00761A2D;
 			remoteInfo = SFErrors;
 		};
+		F55DE5661AA3D6DC0037657D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F546C9841AA33EAB00761A2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F55DE5591AA3D6DC0037657D;
+			remoteInfo = "SFErrors-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F55DE5581AA3D6DC0037657D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				F55DE55D1AA3D6DC0037657D /* SFErrors_iOS.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F546C98D1AA33EAB00761A2D /* SFErrors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFErrors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +58,11 @@
 		F546C99F1AA33EAB00761A2D /* SFErrorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFErrorsTests.swift; sourceTree = "<group>"; };
 		F546C9AA1AA341E400761A2D /* SFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFError.swift; sourceTree = "<group>"; };
 		F546C9AB1AA341E400761A2D /* SFFailable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFFailable.swift; sourceTree = "<group>"; };
+		F55DE55A1AA3D6DC0037657D /* libSFErrors-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSFErrors-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55DE55C1AA3D6DC0037657D /* SFErrors_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFErrors_iOS.h; sourceTree = "<group>"; };
+		F55DE55E1AA3D6DC0037657D /* SFErrors_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFErrors_iOS.m; sourceTree = "<group>"; };
+		F55DE5641AA3D6DC0037657D /* SFErrors-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SFErrors-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55DE56A1AA3D6DC0037657D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +81,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F55DE5571AA3D6DC0037657D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55DE5611AA3D6DC0037657D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55DE5651AA3D6DC0037657D /* libSFErrors-iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +104,8 @@
 			children = (
 				F546C98F1AA33EAB00761A2D /* SFErrors */,
 				F546C99C1AA33EAB00761A2D /* SFErrorsTests */,
+				F55DE55B1AA3D6DC0037657D /* SFErrors-iOS */,
+				F55DE5681AA3D6DC0037657D /* SFErrors-iOSTests */,
 				F546C98E1AA33EAB00761A2D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +115,8 @@
 			children = (
 				F546C98D1AA33EAB00761A2D /* SFErrors.framework */,
 				F546C9981AA33EAB00761A2D /* SFErrorsTests.xctest */,
+				F55DE55A1AA3D6DC0037657D /* libSFErrors-iOS.a */,
+				F55DE5641AA3D6DC0037657D /* SFErrors-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +163,31 @@
 				F546C9AB1AA341E400761A2D /* SFFailable.swift */,
 			);
 			path = _global;
+			sourceTree = "<group>";
+		};
+		F55DE55B1AA3D6DC0037657D /* SFErrors-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F55DE55C1AA3D6DC0037657D /* SFErrors_iOS.h */,
+				F55DE55E1AA3D6DC0037657D /* SFErrors_iOS.m */,
+			);
+			path = "SFErrors-iOS";
+			sourceTree = "<group>";
+		};
+		F55DE5681AA3D6DC0037657D /* SFErrors-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F55DE5691AA3D6DC0037657D /* Supporting Files */,
+			);
+			path = "SFErrors-iOSTests";
+			sourceTree = "<group>";
+		};
+		F55DE5691AA3D6DC0037657D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F55DE56A1AA3D6DC0037657D /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +240,41 @@
 			productReference = F546C9981AA33EAB00761A2D /* SFErrorsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F55DE5591AA3D6DC0037657D /* SFErrors-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55DE56F1AA3D6DC0037657D /* Build configuration list for PBXNativeTarget "SFErrors-iOS" */;
+			buildPhases = (
+				F55DE5561AA3D6DC0037657D /* Sources */,
+				F55DE5571AA3D6DC0037657D /* Frameworks */,
+				F55DE5581AA3D6DC0037657D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SFErrors-iOS";
+			productName = "SFErrors-iOS";
+			productReference = F55DE55A1AA3D6DC0037657D /* libSFErrors-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F55DE5631AA3D6DC0037657D /* SFErrors-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55DE5701AA3D6DC0037657D /* Build configuration list for PBXNativeTarget "SFErrors-iOSTests" */;
+			buildPhases = (
+				F55DE5601AA3D6DC0037657D /* Sources */,
+				F55DE5611AA3D6DC0037657D /* Frameworks */,
+				F55DE5621AA3D6DC0037657D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F55DE5671AA3D6DC0037657D /* PBXTargetDependency */,
+			);
+			name = "SFErrors-iOSTests";
+			productName = "SFErrors-iOSTests";
+			productReference = F55DE5641AA3D6DC0037657D /* SFErrors-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,6 +288,12 @@
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					F546C9971AA33EAB00761A2D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F55DE5591AA3D6DC0037657D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F55DE5631AA3D6DC0037657D = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
@@ -199,6 +312,8 @@
 			targets = (
 				F546C98C1AA33EAB00761A2D /* SFErrors */,
 				F546C9971AA33EAB00761A2D /* SFErrorsTests */,
+				F55DE5591AA3D6DC0037657D /* SFErrors-iOS */,
+				F55DE5631AA3D6DC0037657D /* SFErrors-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,6 +327,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F546C9961AA33EAB00761A2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55DE5621AA3D6DC0037657D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,6 +362,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F55DE5561AA3D6DC0037657D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55DE55F1AA3D6DC0037657D /* SFErrors_iOS.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55DE5601AA3D6DC0037657D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -247,6 +384,11 @@
 			isa = PBXTargetDependency;
 			target = F546C98C1AA33EAB00761A2D /* SFErrors */;
 			targetProxy = F546C99A1AA33EAB00761A2D /* PBXContainerItemProxy */;
+		};
+		F55DE5671AA3D6DC0037657D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F55DE5591AA3D6DC0037657D /* SFErrors-iOS */;
+			targetProxy = F55DE5661AA3D6DC0037657D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -396,6 +538,58 @@
 			};
 			name = Release;
 		};
+		F55DE56B1AA3D6DC0037657D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F55DE56C1AA3D6DC0037657D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F55DE56D1AA3D6DC0037657D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SFErrors-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F55DE56E1AA3D6DC0037657D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SFErrors-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -425,6 +619,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F55DE56F1AA3D6DC0037657D /* Build configuration list for PBXNativeTarget "SFErrors-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55DE56B1AA3D6DC0037657D /* Debug */,
+				F55DE56C1AA3D6DC0037657D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F55DE5701AA3D6DC0037657D /* Build configuration list for PBXNativeTarget "SFErrors-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55DE56D1AA3D6DC0037657D /* Debug */,
+				F55DE56E1AA3D6DC0037657D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
