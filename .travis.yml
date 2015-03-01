@@ -3,4 +3,4 @@
 language: objective-c
 osx_image: xcode61
 script:
-- xctool -project SFErrors.xcodeproj -scheme SFErrors -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool -project SFErrors.xcodeproj -scheme SFErrors-iOS -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
