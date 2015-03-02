@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F55DE5591AA3D6DC0037657D"
-               BuildableName = "libSFErrors-iOS.a"
-               BlueprintName = "SFErrors-iOS"
+               BlueprintIdentifier = "F546C98C1AA33EAB00761A2D"
+               BuildableName = "SFErrors.framework"
+               BlueprintName = "SFErrors"
                ReferencedContainer = "container:SFErrors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F55DE5631AA3D6DC0037657D"
-               BuildableName = "SFErrors-iOSTests.xctest"
-               BlueprintName = "SFErrors-iOSTests"
+               BlueprintIdentifier = "F546C9971AA33EAB00761A2D"
+               BuildableName = "SFErrorsTests.xctest"
+               BlueprintName = "SFErrorsTests"
                ReferencedContainer = "container:SFErrors.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F55DE5631AA3D6DC0037657D"
-               BuildableName = "SFErrors-iOSTests.xctest"
-               BlueprintName = "SFErrors-iOSTests"
+               BlueprintIdentifier = "F546C9971AA33EAB00761A2D"
+               BuildableName = "SFErrorsTests.xctest"
+               BlueprintName = "SFErrorsTests"
                ReferencedContainer = "container:SFErrors.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +56,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F55DE5591AA3D6DC0037657D"
-            BuildableName = "libSFErrors-iOS.a"
-            BlueprintName = "SFErrors-iOS"
+            BlueprintIdentifier = "F546C98C1AA33EAB00761A2D"
+            BuildableName = "SFErrors.framework"
+            BlueprintName = "SFErrors"
             ReferencedContainer = "container:SFErrors.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +75,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F55DE5591AA3D6DC0037657D"
-            BuildableName = "libSFErrors-iOS.a"
-            BlueprintName = "SFErrors-iOS"
+            BlueprintIdentifier = "F546C98C1AA33EAB00761A2D"
+            BuildableName = "SFErrors.framework"
+            BlueprintName = "SFErrors"
             ReferencedContainer = "container:SFErrors.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F55DE5591AA3D6DC0037657D"
-            BuildableName = "libSFErrors-iOS.a"
-            BlueprintName = "SFErrors-iOS"
+            BlueprintIdentifier = "F546C98C1AA33EAB00761A2D"
+            BuildableName = "SFErrors.framework"
+            BlueprintName = "SFErrors"
             ReferencedContainer = "container:SFErrors.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
