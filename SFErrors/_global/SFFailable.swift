@@ -134,4 +134,3 @@ public class SFFailableValueWrapper<T> {
     /// - parameter value: The value to store
     public init(_ value: T) { self.value = value }
 }
-

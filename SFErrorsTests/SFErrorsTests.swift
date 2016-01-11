@@ -34,75 +34,77 @@ import UIKit
 import XCTest
 
 class SFErrorsTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+  override func setUp() {
+    super.setUp()
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+  }
+
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    super.tearDown()
+  }
+
+  func failsForNegativeNumbers(value: Int) -> SFFailable {
+    if value >= 0 {
+      return .Success
+
+    } else {
+      return .Failure(SFError(code: value, domain: "SFFailabletests", userInfo: nil))
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+  }
+
+  func doubleValueUnlessNegative(value: Int) -> SFFailableOf<Int> {
+    if value >= 0 {
+      return SFFailableOf<Int>(value * 2)
+      // should be: return .Success(value * 2)
+
+    } else {
+      return .Failure(
+        SFError(code: value, domain: "SFFailabletests", userInfo: ["Message" : "Pick a positive number"])
+      )
     }
-    
-    func failsForNegativeNumbers(value: Int) -> SFFailable {
-        if value >= 0 {
-            return .Success
-        }
-        else {
-            return .Failure(SFError(code: value, domain: "SFFailabletests", userInfo: nil))
-        }
-    }
-    
-    func doubleValueUnlessNegative(value: Int) -> SFFailableOf<Int> {
-        if value >= 0 {
-            return SFFailableOf<Int>(value * 2)
-            // should be: return .Success(value * 2)
-        }
-        else {
-            return .Failure(SFError(code: value, domain: "SFFailabletests", userInfo: ["Message" : "Pick a positive number"]))
-        }
-    }
-    
-    func testBasicSFFailableUsageSuccess() {
-        let response = failsForNegativeNumbers(1)
-        XCTAssertFalse(response.failed)
-    }
-    
-    func testBasicSFFailableUsageFailure() {
-        let response = failsForNegativeNumbers(-123)
-        XCTAssertTrue(response.failed)
-        
-        let error = response.error!
-        XCTAssertEqual(error.code, -123)
-        XCTAssertEqual(error.domain, "SFFailabletests")
-        XCTAssertEqual(error.userInfo.count, 0)
-    }
-    
-    func testBasicSFFailableOfUsageSuccess() {
-        let response = doubleValueUnlessNegative(100)
-        XCTAssertFalse(response.failed)
-        XCTAssertEqual(response.value!, 200)
-    }
-    
-    func testBasicSFFailableUsageOfFailure() {
-        let response = doubleValueUnlessNegative(-13)
-        XCTAssertTrue(response.failed)
-        
-        let error = response.error!
-        XCTAssertEqual(error.code, -13)
-        XCTAssertEqual(error.domain, "SFFailabletests")
-        XCTAssertEqual(error.userInfo.count, 1)
-        XCTAssertTrue(error.userInfo["Message"]! as! String == "Pick a positive number")
-    }
-    
-    func testDelayedValuesInSFFailableOf() {
-        var value: Int = 0
-        let result = SFFailableOf(value++)
-        
-        XCTAssertEqual(result.value!, 0)
-        XCTAssertEqual(result.value!, 0)
-        XCTAssertEqual(value, 1)
-    }
-    
+  }
+
+  func testBasicSFFailableUsageSuccess() {
+    let response = failsForNegativeNumbers(1)
+    XCTAssertFalse(response.failed)
+  }
+
+  func testBasicSFFailableUsageFailure() {
+    let response = failsForNegativeNumbers(-123)
+    XCTAssertTrue(response.failed)
+
+    let error = response.error!
+    XCTAssertEqual(error.code, -123)
+    XCTAssertEqual(error.domain, "SFFailabletests")
+    XCTAssertEqual(error.userInfo.count, 0)
+  }
+
+  func testBasicSFFailableOfUsageSuccess() {
+    let response = doubleValueUnlessNegative(100)
+    XCTAssertFalse(response.failed)
+    XCTAssertEqual(response.value!, 200)
+  }
+
+  func testBasicSFFailableUsageOfFailure() {
+    let response = doubleValueUnlessNegative(-13)
+    XCTAssertTrue(response.failed)
+
+    let error = response.error!
+    XCTAssertEqual(error.code, -13)
+    XCTAssertEqual(error.domain, "SFFailabletests")
+    XCTAssertEqual(error.userInfo.count, 1)
+    XCTAssertTrue(error.userInfo["Message"]! as! String == "Pick a positive number")
+  }
+
+  func testDelayedValuesInSFFailableOf() {
+    var value: Int = 0
+    let result = SFFailableOf(value++)
+
+    XCTAssertEqual(result.value!, 0)
+    XCTAssertEqual(result.value!, 0)
+    XCTAssertEqual(value, 1)
+  }
+
 }
