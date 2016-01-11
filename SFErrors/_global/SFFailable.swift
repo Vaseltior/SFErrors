@@ -55,7 +55,7 @@ public enum SFFailable {
     /// A property maintaining information about the failed state
     public var failed: Bool {
         switch self {
-        case .Failure(let error):
+        case .Failure( _):
             return true
 
         default:
@@ -94,7 +94,7 @@ public enum SFFailableOf<T> {
 
     public var failed: Bool {
         switch self {
-        case .Failure(let error):
+        case .Failure( _):
             return true
 
         default:
@@ -131,7 +131,7 @@ public class SFFailableValueWrapper<T> {
     /// The value
     public let value: T
     
-    /// :param: value The value to store
+    /// - parameter value: The value to store
     public init(_ value: T) { self.value = value }
 }
 

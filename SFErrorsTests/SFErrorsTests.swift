@@ -98,7 +98,7 @@ class SFErrorsTests: XCTestCase {
     
     func testDelayedValuesInSFFailableOf() {
         var value: Int = 0
-        var result = SFFailableOf(value++)
+        let result = SFFailableOf(value++)
         
         XCTAssertEqual(result.value!, 0)
         XCTAssertEqual(result.value!, 0)

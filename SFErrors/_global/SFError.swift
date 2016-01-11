@@ -59,11 +59,11 @@ public struct SFError {
     ///
     /// Initializes a new `Error` instance.
     ///
-    /// :param: code The error code
-    /// :param: domain The error domain
-    /// :param: userInfo Any neede user info
+    /// - parameter code: The error code
+    /// - parameter domain: The error domain
+    /// - parameter userInfo: Any neede user info
     ///
-    /// :returns: A new SFError instance
+    /// - returns: A new SFError instance
     ///
     public init(code: Int, domain: String, userInfo: SFErrorInfoDictionary?) {
         self.code = code
