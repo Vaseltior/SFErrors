@@ -1,0 +1,32 @@
+disabled_rules: # rule identifiers to exclude from running
+  - variable_name
+  - colon
+  - comma
+  - control_statement
+  - force_cast
+  - valid_docs
+  - legacy_constructor
+  - file_length 
+  - trailing_whitespace
+  # Find all the available rules by running:
+  # swiftlint rules
+
+# parameterized rules can be customized from this configuration file
+line_length: 120
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+  - sources/common/004-vendor
+  - synchro-agenda/sources/common/004-vendor
+
+# parameterized rules are first parameterized as a warning level, then error level.
+type_body_length:
+  - 500 # warning
+  - 1000 # error
+function_body_length:
+  - 70 # warning
+  - 140 # error
+variable_name_min_length : 1
+variable_name_max_length : 120
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
