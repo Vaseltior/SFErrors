@@ -17,3 +17,35 @@ profile
 DerivedData
 .idea/
 *.orig
+# OS X Finder
+.DS_Store
+
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+xcuserdata
+
+# Build products
+/build/
+build
+*.o
+*.LinkFileList
+*.hmap
+profile
+*.moved-aside
+DerivedData/
+/Expertise-Grele/DerivedData
+.idea/
+*.orig
+Carthage/Checkouts/
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
