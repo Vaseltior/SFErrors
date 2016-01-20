@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "231BD3D60DF913B1F46D77B2DDD38A2C579D96E5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "231BD3D60DF913B1F46D77B2DDD38A2C579D96E5" : 0,
+    "1AF5C29179D91C051C5367E3E751949DDC24B132" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "768633C7-2190-4A5A-B7E6-06D5E4B660AF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "231BD3D60DF913B1F46D77B2DDD38A2C579D96E5" : "SFErrors",
+    "1AF5C29179D91C051C5367E3E751949DDC24B132" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SFErrors",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SFErrors.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "castle-black.local:aviva-workspace.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1AF5C29179D91C051C5367E3E751949DDC24B132"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Vaseltior\/SFErrors.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "231BD3D60DF913B1F46D77B2DDD38A2C579D96E5"
+    }
+  ]
+}
