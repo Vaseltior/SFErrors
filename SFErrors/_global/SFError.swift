@@ -36,7 +36,7 @@
 ///
 /// Creates a new type that is used to represent error information in Swift.
 ///
-/// This is a new Swift-specific error type used to return error information. 
+/// This is a new Swift-specific error type used to return error information.
 /// The primary usage of this object is to
 /// return it as a `SFFailable` or `SFFailableOf<T>` from function that could fail.
 ///
@@ -44,36 +44,40 @@
 ///     `func readContentsOfFileAtPath(path: String) -> Failable<String>`
 ///
 public struct SFError {
-    /// A simple alias
-    public typealias SFErrorInfoDictionary = Dictionary<String, Any>
+  /// A simple alias
+  public typealias SFErrorInfoDictionary = Dictionary<String, Any>
 
-    /// The error code used to differentiate between various error states.
-    public let code: Int
+  /// The error code used to differentiate between various error states.
+  public let code: Int
 
-    /// A string that is used to group errors into related error buckets.
-    public let domain: String
+  /// A string that is used to group errors into related error buckets.
+  public let domain: String
 
-    /// A place to store any custom information that needs to be passed along with the error instance.
-    public let userInfo: SFErrorInfoDictionary
+  /// A place to store any custom information that needs to be passed along with the error instance.
+  public let userInfo: SFErrorInfoDictionary
 
-    ///
-    /// Initializes a new `Error` instance.
-    ///
-    /// - parameter code: The error code
-    /// - parameter domain: The error domain
-    /// - parameter userInfo: Any neede user info
-    ///
-    /// - returns: A new SFError instance
-    ///
-    public init(code: Int, domain: String, userInfo: SFErrorInfoDictionary?) {
-        self.code = code
-        self.domain = domain
-        
-        if let info = userInfo {
-            self.userInfo = info
-            
-        } else {
-            self.userInfo = SFErrorInfoDictionary()
-        }
+  ///
+  /// Initializes a new `Error` instance.
+  ///
+  /// - parameter code: The error code
+  /// - parameter domain: The error domain
+  /// - parameter userInfo: Any neede user info
+  ///
+  /// - returns: A new SFError instance
+  ///
+  public init(code: Int, domain: String, userInfo: SFErrorInfoDictionary?) {
+    self.code = code
+    self.domain = domain
+
+    if let info = userInfo {
+      self.userInfo = info
+
+    } else {
+      self.userInfo = SFErrorInfoDictionary()
     }
+  }
 }
+
+public typealias SFVoidCompletionBlock = (Void) -> (Void)
+public typealias SFModelCompletionBlock = (SFFailable) -> (Void)
+public typealias SFModelDataCompletionBlock = (SFFailable, AnyObject?) -> (Void)
